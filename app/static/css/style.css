@@ -1,26 +1,49 @@
+/* 
+
+CSS - MobThon 
+
+Aqui ficará concentrado todo código referente ao CSS do código. CSS é a sigla para o termo em inglês 
+Cascading Style Sheets que, traduzido para o português, significa Folha de Estilo em Cascatas. 
+
+*/
 body{
-    margin: 0;                                         
+    margin: 0;
+    padding: 0;                                         
     display: grid;                                     
     grid-template-areas: 'navbar navbar navbar navbar'
-                         'header section aside div' 
+                         'header header header header'
+                         'section section aside aside'
+                         'article article article article' 
                          'footer footer footer footer';
 
-    grid-template-rows: 20vh 70vh 20vh 20vh;          
+    grid-template-rows: 20vh 70vh 20vh 20vh 20vh;          
 
 }
 
-/* ------------------------------------- NAV  ------------------------------------------------ */
+/* <><><><><><><><><><><><><><><><<><><><>  NAV  <><><><><><><><><><><><><><><><><><><><><><><><><><><><><><> */
 
-nav{                                                   
+/* NAV */
 
-    grid-area: navbar;                                 /*  definindo o vav como navbar  */
-    height: 20vh;                                      /*  mudando a altura  */
-    background-color: rgb(255, 255, 255);            /*  mudando a cor  */
-    display: flex;                                     /*  definindo display flex  */
-    align-items: center;                               /*  definindo alinhamento horizontal  */
-    justify-content: space-around;                     /*  Separando os itens  */
+nav{    
+
+    align-items: center;                                               /*  Definindo alinhamento horizontal  */
+    background-color: gray;                                          /*  Mudando a cor  */
+    border-top: 10px solid #7fffd4;                                  /*  Borda topo  */   
+    display: flex;                                                     /*  Definindo display flex  */
+    grid-area: navbar;                                                 /*  Definindo o vav como navbar  */
+    height: 20vh;                                                      /*  Mudando a altura  */
+    justify-content: space-around;                                     /*  Separando os itens  */
     
 }
+
+/* NAV --> img (logo) */
+
+nav div img{
+    height: 80px;
+    width: 80px;
+}
+
+/* NAV --> ul (lista) */
 
 ul{
     display: flex;
@@ -30,8 +53,9 @@ ul{
     width: 70%;
 }
 
+/* NAV --> ul --> (estilos de fontes) */
 a{
-    color: black;
+    color: white;
     font-size: 14pt;
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
@@ -39,59 +63,68 @@ a{
     cursor: pointer;
 }
 
-nav img{
-    height: 50%;
-    display: flex;
+#divLogin{
+    padding: 1.2rem 2rem .8rem;
+    background-color: rgba(0, 0, 0, 0.103);
+    display: inline-block;
+    border-radius: 2rem;
+    border: 5px solid aquamarine;
 }
 
-/* ------------------------------------------ GRID ---------------------------------------------------- */
 
-header{                                                /*  Definindo o header do grid  */
+/* <><><><><><><><><><><><><><><><<><><><><><><> GRID <><><><><><><><><><><><><><><><<><><><><><><> */
+
+header{                                                             /*  Definindo o header do grid  */
     grid-area: header;
     background-color: pink;
 }
-section{                                               /*  Definindo a section do grid  */
+section{                                                            /*  Definindo a section do grid  */
     grid-area: section;
     background-color: blue;
 }
-aside{                                                 /*  Definindo o header do grid  */
+aside{                                                             /*  Definindo o header do grid  */
     grid-area: aside;
     background-color: orange;
 }
-
-div{                                                  /*  Definindo o div do grid  */
-    grid-area: div;
+article{                                                           /*  Definindo o article do grid  */
+    grid-area: article;
     background-color: yellowgreen;
 }
 
-footer{                                                /*  Definindo o header do grid  */
+footer{                                                            /*  Definindo o header do grid  */
     grid-area: footer;
     background-color: yellow;
 }
 
-/* ---------------------------------------- MEDIA ----------------------------------------------------- */
+/* <><><><><><><><><><><><><><><><<><><><><><><> MEDIA <><><><><><><><><><><><><><><><<><><><><><><> */
 
 @media(max-width: 768px){                             /*  Media Queries  */
     body{
         grid-template-areas: 'navbar navbar navbar navbar'
                              'header header section section'  
-                             'aside aside div div' 
+                             'aside aside article article' 
                              'footer footer footer footer';
         grid-template-rows: 20vh 70vh 70vh 20vh ;                        /*  Aqui precisa acrescentar mais uma linha  */
         grid-gap: 10px;                                                  /*  EspaÃ§o entre as estrofes  */
     }
 }
 
-
 @media(max-width: 475px){ 
     body{
         grid-template-areas: 'navbar navbar navbar navbar'
                              'header header header header'  
                              'section section section section'  
-                             'div div div div '  
+                             'article article article article '  
                              'aside aside aside aside' 
                              'footer footer footer footer';
         grid-template-rows:20vh 70vh 70vh 70vh 70vh 20vh;                /*  Aqui precisa acrescentar 6 linhas  */
         grid-gap: 10px;                                                  /*  EspaÃ§o entre as estrofes  */
     }
+}
+
+header,section,aside,article{                                                         /*  tudo com o mesmo  */
+    display: flex;                                                                /*  display ta flex  */
+    align-items: center;                                                         /*  ajusta vertical  */
+    justify-content: center;                                                     /*  ajusta horizontal  */
+    flex-direction: column;                                                      /*  fizemos o flex em clouna, e inverte tudo  */
 }

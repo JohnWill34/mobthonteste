@@ -1,3 +1,12 @@
+<!-- 
+
+HTML - MobThon
+
+Aqui ficará concentrado todo código referente ao HTML do código. HTML é a sigla para o termo em inglês 
+Hypertext Markup Language que, traduzido para o português, significa Linguagem de Marcação de Hipertexto.
+
+-->
+
 {% load staticfiles %}
 
 <!DOCTYPE html>
@@ -7,33 +16,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{% static 'css/style.css' %} ">
-    <script src="{% static 'js/script.js' %}"></script>
+    <script defer src="{% static 'js/script.js' %}"></script>
     <title>MobThon - Sua Mobilidade </title>
 </head>
 <body>
     <nav>
-        <a>
-            <p>TESTE</p>
+        <div class="Logo">
             <img src="{% static 'images/logo.png' %}" alt="Logo">
-        </a>
+        </div>
 
         <ul>
-            <li><a href="">Início</a></li>
-            <li><a href="">Mapthon</a></li> 
-            <li><a href="">Contato</a></li>
-            <li><a href="">Sobre</a></li>
+            <li><a href="#" class='efeito'>Início</a></li>
+            <li><a href="#" class='efeito'>Mapthon</a></li> 
+            <li><a href="#" class='efeito'>Contato</a></li>
+            <li><a href="#" class='efeito'>Sobre</a></li>
         </ul>
 
-        <div class="User">
+        <div id='divLogin'>
             <a href="">Iniciar sessão</a>
         </div>
 
         
     </nav>
     <header></header> 
-    <section></section> 
+    <section></section>
+    <article></article>
     <aside></aside> 
-    <div></div>
     <footer></footer>
 </body>
 </html>
