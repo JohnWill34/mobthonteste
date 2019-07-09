@@ -13,23 +13,18 @@ body{
     margin: 0;
     padding: 0;                                         
     display: grid;                                     
-    grid-template-areas: 'navbar navbar navbar navbar'
-                         'header header header header'
+    grid-template-areas: 'header header header header'
                          'section section aside aside'
                          'article article article article' 
                          'footer footer footer footer';
 
-    grid-template-rows: 20vh 70vh 20vh 20vh 20vh;          
+    grid-template-rows: 100vh 70vh 20vh 20vh 20vh;          
 
 }
 
-nav{                                                                /*  Definindo o header do grid  */
-    grid-area: navbar;
-    background-color: rgba(0, 0, 0, .4);
-}
 header{                                                             /*  Definindo o header do grid  */
     grid-area: header;
-    background-color: pink;
+    background-color: rgba(0, 0, 0, .4);
 }
 section{                                                            /*  Definindo a section do grid  */
     grid-area: section;
@@ -51,13 +46,38 @@ footer{                                                            /*  Definindo
 
 /* <><><><><><><><><><><><><><><><<><><><>  NAV  <><><><><><><><><><><><><><><><><><><><><><><><><><><><><><> */
 
+/* NAV - SCROLL */
+
+.menuScroll {	
+    position: fixed;	
+    top: 0px;	
+    width: 100%;	
+    height: auto;	
+    background-image: linear-gradient(to right, rgb(46, 166, 247) 0%, aquamarine 46%, rgba(127, 255, 212, 0.562) 100%);	
+ }
+
+.botaoScroll {	
+    padding: 10px;	
+    text-align: center;	
+    border-radius: 20px;	
+    background: white;	
+    border: white solid 2px;	
+    color: white;	
+}	
+
 /* NAV */
 
 nav{    
     align-items: center;                                               /*  Definindo alinhamento horizontal  */                                        
     border-top: 10px solid #7fffd4;                                  /*  Borda topo  */   
     display: flex;                                                     /*  Definindo display flex  */                                                 
-    justify-content: space-around;                                     /*  Separando os itens  */  
+    justify-content: space-around;                                     /*  Separando os itens  */ 
+    position: fixed;	
+    top: 0px;	
+    width: 100%;	
+    height: auto;	 
+    background-color: rgba(0, 0, 0, .4);
+    
 }
 
 /* NAV --> img (logo) */
@@ -79,7 +99,7 @@ nav ul{
 /* NAV --> ul --> (estilos de fontes) */
 nav ul li a{
     color: white;
-    font-size: 14pt;
+    font-size: 12pt;
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bolder; 
@@ -96,9 +116,25 @@ nav a:hover{
     background-color: rgba(0, 0, 0, 0.103);
     display: inline-block;
     border-radius: 2rem;
+    border: 5px solid white;
+    color: white;
+}
+
+#divLogin a{
+    color: white;
+    font-size: 12pt;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder; 
+    cursor: pointer;
+}
+
+#divLogin:hover{
+    background-color: aquamarine;
     border: 5px solid aquamarine;
     color: white;
 }
+
 
 /* <><><><><><><><><><><><><><><><<><><><>  HEADER     <><><><><><><><><><><><><><><><><><><><><><><><><><><><><> */
 
