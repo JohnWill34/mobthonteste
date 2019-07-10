@@ -14,11 +14,12 @@ body{
     padding: 0;                                         
     display: grid;                                     
     grid-template-areas: 'header header header header'
-                         'section section aside aside'
+                         'section section section section'
+                         'aside aside aside aside'
                          'article article article article' 
                          'footer footer footer footer';
 
-    grid-template-rows: 100vh 70vh 20vh 20vh 20vh;          
+    grid-template-rows: 100vh 70vh 20vh 20vh 20vh 20vh;          
 
 }
 
@@ -28,7 +29,7 @@ header{                                                             /*  Definind
 }
 section{                                                            /*  Definindo a section do grid  */
     grid-area: section;
-    background-color: blue;
+    background-color: black;
 }
 aside{                                                             /*  Definindo o header do grid  */
     grid-area: aside;
@@ -48,20 +49,20 @@ footer{                                                            /*  Definindo
 
 /* NAV - SCROLL */
 
-.menuScroll {	
+.menuScroll {
     position: fixed;	
     top: 0px;	
     width: 100%;	
     height: auto;	
-    background-image: linear-gradient(to right, rgb(46, 166, 247) 0%, aquamarine 46%, rgba(127, 255, 212, 0.562) 100%);	
+    background-image: linear-gradient(to right, rgb(46, 166, 247) 0%, aquamarine 46%, rgb(46, 166, 247) 100%);	
  }
 
 .botaoScroll {	
     padding: 10px;	
     text-align: center;	
     border-radius: 20px;	
-    background: white;	
-    border: white solid 2px;	
+    background: aquamarine;	
+    border: aquamarine solid 2px;	
     color: white;	
 }	
 
@@ -143,6 +144,36 @@ header{
     background-size: cover; 
 
 }
+
+/* <><><><><><><><><><><><><><><><<><><><>  SECTION    <><><><><><><><><><><><><><><><><><><><><><><><><><><><><> */
+
+.container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.container .circle{
+    position: absolute;
+    width: 100%;	
+    height: auto;
+    background-attachment: fixed;
+    background-position: center;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 2s;  
+}
+
+.container .circle.ft1{
+    background: url("/static/images/section/ft1.jpg");
+    clip-path: circle(100px at 25% center);
+}
+
+
 /* <><><><><><><><><><><><><><><><<><><><>  FOOTER  <><><><><><><><><><><><><><><><><><><><><><><><><><><><><><> */
 
 footer{    
