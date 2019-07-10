@@ -11,7 +11,7 @@ var menu = document.querySelector('header nav');
 (function () {
     window.addEventListener('scroll', function () {
         if (window.scrollY > 0) menu.classList.add('menuScroll');
-        else menu.classList.remove('menuScroll');s
+        else menu.classList.remove('menuScroll');
     });
 })();
 
