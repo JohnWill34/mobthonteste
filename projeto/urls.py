@@ -21,4 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.mostrar_index),
     path('', views.mostrar_login),
+    path('', views.mostrar_mapthon),
 ]

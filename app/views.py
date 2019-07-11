@@ -7,3 +7,6 @@ def mostrar_index(request):
 
 def mostrar_login(request):
     return render(request, 'login.html')
+
+def mostrar_mapthon(request):
+    return render(request, 'mapthon.html')
