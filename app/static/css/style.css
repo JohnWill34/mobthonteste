@@ -29,7 +29,7 @@ header{                                                             /*  Definind
 }
 section{                                                            /*  Definindo a section do grid  */
     grid-area: section;
-    background-color: black;
+    background-color: #1d1d1d;
 }
 aside{                                                             /*  Definindo o header do grid  */
     grid-area: aside;
@@ -42,7 +42,7 @@ article{                                                           /*  Definindo
 
 footer{                                                            /*  Definindo o header do grid  */
     grid-area: footer;
-    background-color: aquamarine;
+    background-color: black;
 }
 
 /* <><><><><><><><><><><><><><><><<><><><>  NAV  <><><><><><><><><><><><><><><><><><><><><><><><><><><><><><> */
@@ -54,7 +54,7 @@ footer{                                                            /*  Definindo
     top: 0px;	
     width: 100%;	
     height: auto;	
-    background-image: linear-gradient(aquamarine, #763ae8 );
+    background-image: linear-gradient(aquamarine, #773ae89a );
     /* background-image: linear-gradient(to right, rgb(46, 166, 247) 20%, aquamarine 46%, rgb(162, 0, 255) 100%); */ 
  }
 
@@ -152,6 +152,8 @@ header{
     width: 100%;
     height: 100%;
     display: flex;
+    justify-content: space-around;
+    align-items: center; 
 
 }
 
@@ -160,9 +162,6 @@ header{
     height: 100%;
     cursor: pointer;
     transition: 1s;  
-    display: flex;
-    justify-content: space-around;
-    align-items: center; 
 }
 
 .container .circle.circle1{
@@ -189,28 +188,128 @@ header{
 
 /* <><><><><><><><><><><><><><><><<><><><>  FOOTER  <><><><><><><><><><><><><><><><><><><><><><><><><><><><><><> */
 
-footer{    
-    align-items: center;                                               /*  Definindo alinhamento horizontal  */
-    display: flex;                                                     /*  Definindo display flex  */
-    grid-area: footer;                                                 /*  Definindo o vav como navbar  */
-    justify-content: space-around;                                     /*  Separando os itens  */
-}
-
-footer ul{
+footer{
     display: flex;
-    list-style-type: none; 
-    justify-content: space-around;
+    align-items: center;
+    justify-content: center;     
+} 
+
+footer div{
+    display: flex;
+    margin-left: 10%;
+    justify-content: center;
     align-items: center;
 }
 
-footer ul li a{
-    color: white;
-    font-size: 19pt;
-    text-decoration: none;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bolder; 
-    cursor: pointer;
+#copyright{
+    display:flex;
+    align-items: flex-end;
+    justify-content: center;
 }
+
+footer div ul{
+    /* position: absolute;
+    top: 50%;
+    left: 50%;  */
+    display: flex;
+    justify-content: space-around;
+    align-items: center; 
+    transform: translate(-40%,-40%);
+    margin: 0;
+    padding: 0; 
+} 
+footer div ul li{
+list-style: none;
+}
+
+footer div ul li a{
+    display: block;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: aquamarine;
+    margin: 0 10px;
+    transition: .5s;
+}
+
+footer div ul li a span{
+    position: absolute;
+    transition: transform .5s;
+}
+
+footer div ul li a span:nth-child(1),
+footer div ul li a span:nth-child(3){
+    width: 100%;
+    height: 1px;
+    background: aquamarine;
+}
+
+footer div ul li a span:nth-child(1){
+    top: 0;
+    left: 0;
+    transform-origin:right;
+
+}
+
+footer div ul li a:hover span:nth-child(1){
+    transform: scaleX(0);
+    transform-origin:left;
+    transition: transform .5s;     
+}
+footer div ul li a span:nth-child(3){
+    bottom: 0;
+    left: 0;
+    transform-origin:left;
+
+}
+
+footer div ul li a:hover span:nth-child(3){
+    transform: scaleX(0);
+    transform-origin:right;
+    transition: transform .5s;     
+}
+
+
+footer div ul li a span:nth-child(2),
+footer div ul li a span:nth-child(4){
+    width: 1px;
+    height: 100%;
+    background: aquamarine;
+}
+
+footer div ul li a span:nth-child(2){
+    top: 0;
+    left: 0;
+    transform: scaleY(0);
+    transform-origin:bottom;
+
+}
+
+footer div ul li a:hover span:nth-child(2){
+    transform: scaleY(1);
+    transform-origin:top;
+    transition: transform .5s;     
+}
+
+
+footer div ul li a span:nth-child(4){
+    top: 0;
+    right: 0;
+    transform: scaleY(0);
+    transform-origin:top;
+
+}
+
+footer div ul li a:hover span:nth-child(4){ 
+    transform: scaleY(1);
+    transform-origin:bottom;
+    transition: transform .5s;     
+} 
+
 
 /* <><><><><><><><><><><><><><><><<><><><><><><> MEDIA <><><><><><><><><><><><><><><><<><><><><><><> */
 
