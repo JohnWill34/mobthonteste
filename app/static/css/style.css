@@ -19,7 +19,7 @@ body{
                          'article article article article' 
                          'footer footer footer footer';
 
-    grid-template-rows: 100vh 70vh 80vh 50vh 30vh;          
+    grid-template-rows: 100vh 70vh 80vh 70vh 30vh;          
 
 }
 
@@ -37,7 +37,7 @@ aside{                                                             /*  Definindo
 }
 article{                                                           /*  Definindo o article do grid  */
     grid-area: article;
-    background-color: yellowgreen;
+    background-color: #024454;
 }
 
 footer{                                                            /*  Definindo o header do grid  */
@@ -149,12 +149,76 @@ nav a:hover{
 
 /* <><><><><><><><><><><><><><><><<><><><>  HEADER     <><><><><><><><><><><><><><><><><><><><><><><><><><><><><> */
 
+
+/* HEADER --> Background (animado) */
+
 header{
     background-image: url("/static/images/wallpaper2.jpg");
     background-size: cover; 
-    background-attachment: fixed;
+    background-attachment: fixed;   
+    background-position: 120% 0px, 0px 0px, 0px 0px, 0px 0px;
+	background-repeat: no-repeat, repeat, repeat,  repeat;
+	animation: animate-backgroung linear 50s infinite;
 }
 
+@keyframes animate-backgroung{
+	from { background-position: 120% 0px, 0px 0px, 0px 0px, 0px 0px; }
+    to { background-position: -20% 0px, 3000px 0px, 1500px 0px, 1500px 0px; }
+}
+
+
+/* TEXTO CENTRAL */
+.content {
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider-wrapper {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 40px;
+    color: black;
+    font-weight: bold;
+    text-transform: uppercase;
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+  }
+  .slider{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    height: 50px;
+    /* padding-left:15px; */
+    overflow: hidden;
+  }
+  .slider div {
+    color:#fff;
+    height: 50px;
+    margin-bottom: 50px;
+    padding: 2px 15px;
+    text-align: center;
+    box-sizing: border-box;
+  }
+  .slider-text1 {
+    background: lightgreen;
+    animation: slide 5s linear infinite;
+  }
+  .slider-text2 {
+    background: skyblue;
+  }
+  .slider-text3 {
+    background: lightcoral;
+  }
+  @keyframes slide {
+    0% {margin-top:-300px;}
+    5% {margin-top:-200px;}
+    33% {margin-top:-200px;}
+    38% {margin-top:-100px;}
+    66% {margin-top:-100px;}
+    71% {margin-top:0px;}
+    100% {margin-top:0px;}
+  }
 /* <><><><><><><><><><><><><><><><<><><><>  SECTION    <><><><><><><><><><><><><><><><><><><><><><><><><><><><><> */
 
 .container{
@@ -249,6 +313,110 @@ p {
     to {
         filter: drop-shadow(0 0 50px var(--cor-neon));
     }
+}
+/* <><><><><><><><><><><><><><><><<><><><>  ARTICLE  <><><><><><><><><><><><><><><><><><><><><><><><><><><><><><> */
+
+article{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+article:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    border-radius: 0 0 50% 50%/0 0 100% 100%;
+    transform: scaleX(2);
+}
+
+.articleContainer{
+    position: relative;
+    z-index: 5;
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.articleContainer .box{
+    position: relative;
+    width: 350px;
+    height: 350px;
+    padding: 40px;
+    background: #fff;
+    box-shadow: 0 5px 30px rgba(0,0,0,.5);
+    border-radius: 4px;
+    margin: 20px;
+    box-sizing:  border-box;
+    overflow: hidden;
+    text-align: center;
+}
+
+.articleContainer .box .icon{
+    position: relative;
+    width: 80px;
+    height: 80px;
+    color: #ffffff;
+    background: #000;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    border-radius: 50%;
+    font-size: 40px;
+    font-weight: 700;
+    transition: 1s;
+}
+
+.articleContainer .box:nth-child(1) .icon{
+    box-shadow: 0 0 0 0  #0ac7ce;
+    background:  #0ac7ce;
+}
+
+.articleContainer .box:nth-child(1):hover .icon{
+    box-shadow: 0 0 0 400px  #0ac7ce;
+    background:  #0ac7ce;
+}
+
+.articleContainer .box:nth-child(2) .icon{
+    box-shadow: 0 0 0 0 #0ac7ce;
+    background:  #0ac7ce;
+}
+
+.articleContainer .box:nth-child(2):hover .icon{
+    box-shadow: 0 0 0 400px  #0ac7ce;
+    background:  #0ac7ce;
+}
+
+.articleContainer .box:nth-child(3) .icon{
+    box-shadow: 0 0 0 0  #0ac7ce;
+    background: #0ac7ce ;
+}
+
+.articleContainer .box:nth-child(3):hover .icon{
+    box-shadow: 0 0 0 400px  #0ac7ce ;
+    background: #0ac7ce ;
+}
+
+.content {
+    display: flex; 
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-around;
+    position: relative;
+    z-index: 5;
+    transition: 0.5s;
+}
+
+.content:hover{
+    color: white;
 }
 
 /* <><><><><><><><><><><><><><><><<><><><>  FOOTER  <><><><><><><><><><><><><><><><><><><><><><><><><><><><><><> */
