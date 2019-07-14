@@ -197,13 +197,6 @@ header{
 
 /* <><><><><><><><><><><><><><><><<><><><>  ASIDE  <><><><><><><><><><><><><><><><><><><><><><><><><><><><><><> */
 
-.semicircle{
-    height: 10px;
-    width: 10px * 2;
-    border-bottom-left-radius: 10px * 2;
-    border-bottom-right-radius: 10px * 2;
-}
-
 aside{
     background-image: url("/static/images/aside/fundo2.png");
     background-size: cover; 
@@ -266,9 +259,10 @@ footer{
     justify-content: center;     
 } 
 
-footer div{
+.footerSocial, .footerInfo{
+    width: 45%;
+    height: 100%;
     display: flex;
-    margin-left: 10%;
     justify-content: center;
     align-items: center;
 }
@@ -286,15 +280,13 @@ footer div ul{
     display: flex;
     justify-content: space-around;
     align-items: center; 
-    transform: translate(-40%,-40%);
+    /* transform: translate(-40%,-40%); */
     margin: 0;
     padding: 0; 
 } 
-footer div ul li{
-list-style: none;
-}
 
 footer div ul li a{
+    list-style: none;
     display: block;
     position: relative;
     width: 50px;
