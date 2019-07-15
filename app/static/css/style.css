@@ -226,7 +226,7 @@ header{
   }
 /* <><><><><><><><><><><><><><><><<><><><>  SECTION    <><><><><><><><><><><><><><><><><><><><><><><><><><><><><> */
 
-.container{
+/* .container{
     width: 100%;
     height: 100%;
     display: flex;
@@ -257,13 +257,42 @@ header{
     clip-path: circle(100px at 75% center);
 }
 
-/* Efeitos - container */
-
 .container .circle:hover{
     clip-path: circle(1000px at center);
     z-index: 1;
+} */
+
+section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pesquisa{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: #0ac7ce;
+    transition: 5s;
 }
 
+.pesquisa .iconeMapa{
+
+    width: 100px;
+    height: 100px;
+    line-height: 80px;
+    font-size: 30px;
+    color: #024454;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+
+.pesquisa .iconeMapa::before{
+    content: '\f3c5';
+    font-family: fontAwesome;
+}
 /* <><><><><><><><><><><><><><><><<><><><>  ASIDE  <><><><><><><><><><><><><><><><><><><><><><><><><><><><><><> */
 
 aside{

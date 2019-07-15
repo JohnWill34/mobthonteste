@@ -16,3 +16,11 @@ var menu = document.querySelector('header nav');
 })();
 
 console.log("Hello world!");
+
+$(document).ready(function(){
+    $('.iconeMapa').click(function(){
+        $('.pesquisa').toggleClass('active')
+    }){
+
+    }
+})
