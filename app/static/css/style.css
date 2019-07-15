@@ -67,11 +67,15 @@ header{
     /* background-image: linear-gradient(to right, rgb(46, 166, 247) 20%, aquamarine 46%, rgb(162, 0, 255) 100%); */ 
  }
 
+ .menuScroll a:hover{
+    color: #024454;
+ }
+
 .botaoScroll {	
     padding: 10px;	
     text-align: center;	
     border-radius: 20px;	
-    background: aquamarine;		
+    background: #024454;		
     color: white;	
 }	
 
@@ -96,6 +100,7 @@ nav{
 nav div img{
     height: 70px;
     width: 70px;
+    cursor: pointer;
 }
 
 /* NAV --> ul (lista) */
@@ -201,14 +206,14 @@ header{
     box-sizing: border-box;
   }
   .slider-text1 {
-    background: lightgreen;
+    background: rgb(65, 182, 255);
     animation: slide 5s linear infinite;
   }
   .slider-text2 {
-    background: skyblue;
+    background: rgb(127, 255, 212);
   }
   .slider-text3 {
-    background: lightcoral;
+    background: rgb(10, 199, 206);
   }
   @keyframes slide {
     0% {margin-top:-300px;}
@@ -364,7 +369,7 @@ article:before{
     width: 80px;
     height: 80px;
     color: #ffffff;
-    background: #000;
+    background: #024454;
     display: flex; 
     justify-content: center;
     align-items: center;
@@ -422,20 +427,23 @@ article:before{
 /* <><><><><><><><><><><><><><><><<><><><>  FOOTER  <><><><><><><><><><><><><><><><><><><><><><><><><><><><><><> */
 
 footer{
+    width: 100%;
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: center; 
-    border-bottom: 1px solid rgb(209,209,209);    
+    border-bottom: 10px solid aquamarine;  
 } 
 
 .footerMom{
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
+    width: 1000px;
 }
 
 .footerSocial, .footerInfo, .footerCopyright{
-    width: 33.33%;
+    width: 50%;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -446,10 +454,11 @@ footer{
     display:flex;
     align-items: flex-end;
     justify-content: center;
+    color: white;
 }
 
 .footerInfo h3{
-    color: azure;
+    color: white;
 }
 
 /* FOOTER --> social --> (tudo) */
@@ -477,7 +486,7 @@ footer div ul li a{
     font-size: 20px;
     text-align: center;
     text-decoration: none;
-    color: aquamarine;
+    color: white;
     margin: 0 10px;
     transition: .5s;
 }
@@ -491,7 +500,7 @@ footer div ul li a span:nth-child(1),
 footer div ul li a span:nth-child(3){
     width: 100%;
     height: 1px; 
-    background: aquamarine;
+    background: white;
 }
 
 footer div ul li a span:nth-child(1){
@@ -524,7 +533,7 @@ footer div ul li a span:nth-child(2),
 footer div ul li a span:nth-child(4){
     width: 1px;
     height: 100%;
-    background: aquamarine;
+    background: white;
 }
 
 footer div ul li a span:nth-child(2){
@@ -555,7 +564,6 @@ footer div ul li a:hover span:nth-child(4){
     transform-origin:bottom;
     transition: transform .5s;     
 } 
-
 
 
 /* <><><><><><><><><><><><><><><><<><><><><><><> MEDIA <><><><><><><><><><><><><><><><<><><><><><><> */
