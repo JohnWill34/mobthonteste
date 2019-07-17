@@ -1,0 +1,79 @@
+ body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-image: url("/static/images/wallpaper2.jpg");
+    background-size: cover; 
+    background-attachment: fixed;   
+    background-position: 120% 0px, 0px 0px, 0px 0px, 0px 0px;
+	background-repeat: no-repeat, repeat, repeat,  repeat;
+    animation: animate-backgroung linear 50s infinite;
+    display: flex;                                                               
+    align-items: center;                                                         
+    justify-content: center;                                                     
+    flex-direction: column; 
+ 
+}
+
+.box h2{ 
+    color:white;
+    text-transform: uppercase;
+    font-weight: 500;
+
+}
+
+.box{
+    width: 300px;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: linear-gradient(aquamarine, rgb(46, 166, 247) );
+    text-align: center;
+    border-radius: 24px;
+ }  
+ 
+ .box input     {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center; 
+    border: 2px solid aquamarine ;
+    padding: 14px 10px;
+    width: 200px; 
+    outline: none;
+    color: black;
+    border-radius: 24px;
+    transition: 0.25s;
+ }
+
+ .box input:focus{
+     width: 280px;
+     border-color: #2ecc71;
+ }
+ 
+ .box button{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center; 
+    border: 2px solid #2ecc71;
+    padding: 14px 50px; 
+    outline: none;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor:pointer;
+ }  
+
+
+ .box button:hover{
+     background:#2ecc71;
+ } 
+
+ .alert {
+
+    color:white;
+ }

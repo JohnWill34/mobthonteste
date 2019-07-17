@@ -1,0 +1,59 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <title>Login</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="{% static 'css/login.css' %}">
+  
+</head>
+<body>  
+   <!-- <form class="box" action="submit", method="POST">{% csrf_token %}
+     <h2>Login</h2>
+              <input type="username" placeholder="E-mail" name="username" >
+              <input type="password" placeholder="Senha" name="password">
+           
+
+         {% if messages %}
+            {% for message in messages %}
+              <div class="alert">{{ message }}</div>
+            {% endfor %}
+        
+         {% endif %}
+    <button type="submit">Entrar</button>
+    <button href="cadastro">cadastre-se</button> -->
+
+     <div id="cadastro">
+            <form class="box" method="post" action="submit"> {% csrf_token %}
+              <h1>Cadastro</h1> 
+               
+              <p> 
+                <label for="nome_cad">Seu nome</label>
+                <input id="nome_cad" name="nome_cad" required="required" type="text" placeholder="nome" />
+              </p>
+               
+              <p> 
+                <label for="email_cad">Seu e-mail</label>
+                <input id="email_cad" name="email_cad" required="required" type="email" placeholder="E-mail"/> 
+              </p>
+               
+              <p> 
+                <label for="senha_cad">Sua senha</label>
+                <input id="senha_cad" name="senha_cad" required="required" type="password" placeholder="Senha"/>
+              </p>
+               
+            <button type="submit">Cadastrar</button>
+              
+               
+              <p class="link">  
+                Já tem conta?
+                <a href="/login/"> Ir para Login </a>
+              </p>
+            </form>
+          </div>     
+  </form> 
+</body>
+</html>
